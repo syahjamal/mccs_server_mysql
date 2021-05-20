@@ -38,6 +38,7 @@ github.com/json-iterator/go
 github.com/leodido/go-urn
 # github.com/mashingan/smapping v0.1.9
 ## explicit
+github.com/mashingan/smapping
 # github.com/mattn/go-isatty v0.0.12
 github.com/mattn/go-isatty
 # github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd

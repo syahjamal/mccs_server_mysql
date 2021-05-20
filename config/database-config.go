@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
+	"github.com/syahjamal/mccs_server_mysql/model"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -27,6 +28,7 @@ func SetupDatabaseConn() *gorm.DB {
 		panic("failed to create a connection to database")
 	}
 
+	db.AutoMigrate(&model.MccsUser{})
 	return db
 }
 

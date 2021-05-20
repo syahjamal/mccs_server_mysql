@@ -4,13 +4,18 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/syahjamal/mccs_server_mysql/config"
 	"github.com/syahjamal/mccs_server_mysql/controller"
+	"github.com/syahjamal/mccs_server_mysql/repository"
+	"github.com/syahjamal/mccs_server_mysql/service"
 	"gorm.io/gorm"
 )
 
 //variable global untuk controller
 var (
 	db             *gorm.DB                  = config.SetupDatabaseConn()
-	authController controller.AuthController = controller.NewAuthController()
+	userRepository repository.UserRepository = repository.NewUserRepository(db)
+	jwtService     service.JWTService        = service.NewJWTService()
+	authService    service.AuthService       = service.NewAuthService(userRepository)
+	authController controller.AuthController = controller.NewAuthController(authService, jwtService)
 )
 
 func main() {
@@ -23,5 +28,5 @@ func main() {
 		authRoutes.POST("/register", authController.Register)
 	}
 
-	r.Run()
+	r.Run(":5050")
 }
