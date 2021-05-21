@@ -1,16 +1,27 @@
 package config
 
 import (
-	"fmt"
-	"os"
-
-	"github.com/joho/godotenv"
+	"github.com/cengsin/oracle"
+	_ "github.com/godror/godror"
 	"github.com/syahjamal/mccs_server_mysql/model"
-	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
-//SetupDatabaseConn is creating new connection to our database
+func SetupDatabaseConn() *gorm.DB {
+
+	db, err := gorm.Open(oracle.Open(`user="MFG" password="mfg_lge" connectString="(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=150.150.242.55)(PORT=1527))(CONNECT_DATA=(SERVICE_NAME=LSY)))"`), &gorm.Config{})
+	if err != nil {
+		panic("Failed to create connection to database")
+	} else {
+		println("Connected to database")
+	}
+
+	db.AutoMigrate(&model.MccsUser{})
+	return db
+}
+
+/**
+//SetupDatabaseConn is creating new connection to our database mysql
 func SetupDatabaseConn() *gorm.DB {
 	err := godotenv.Load()
 	if err != nil {
@@ -30,7 +41,7 @@ func SetupDatabaseConn() *gorm.DB {
 
 	db.AutoMigrate(&model.MccsUser{})
 	return db
-}
+}**/
 
 //CloseDatabaseConn method is closing
 func CloseDatabaseConn(db *gorm.DB) {

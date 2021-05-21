@@ -28,5 +28,6 @@ func main() {
 		authRoutes.POST("/register", authController.Register)
 	}
 
+	// r.Run(":5050")
 	r.Run(":5050")
 }

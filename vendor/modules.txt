@@ -1,6 +1,15 @@
+# github.com/cengsin/oracle v1.0.0
+## explicit
+github.com/cengsin/oracle
+github.com/cengsin/oracle/clauses
 # github.com/dgrijalva/jwt-go v3.2.0+incompatible
 ## explicit
 github.com/dgrijalva/jwt-go
+# github.com/emirpasic/gods v1.12.0
+github.com/emirpasic/gods/containers
+github.com/emirpasic/gods/sets
+github.com/emirpasic/gods/sets/hashset
+github.com/emirpasic/gods/utils
 # github.com/gin-contrib/sse v0.1.0
 github.com/gin-contrib/sse
 # github.com/gin-gonic/gin v1.7.1
@@ -10,6 +19,8 @@ github.com/gin-gonic/gin/binding
 github.com/gin-gonic/gin/internal/bytesconv
 github.com/gin-gonic/gin/internal/json
 github.com/gin-gonic/gin/render
+# github.com/go-logfmt/logfmt v0.5.0
+github.com/go-logfmt/logfmt
 # github.com/go-playground/locales v0.13.0
 github.com/go-playground/locales
 github.com/go-playground/locales/currency
@@ -18,8 +29,13 @@ github.com/go-playground/universal-translator
 # github.com/go-playground/validator/v10 v10.6.1
 ## explicit
 github.com/go-playground/validator/v10
-# github.com/go-sql-driver/mysql v1.6.0
-github.com/go-sql-driver/mysql
+# github.com/godror/godror v0.20.0
+## explicit
+github.com/godror/godror
+github.com/godror/godror/dsn
+github.com/godror/godror/odpi/embed
+github.com/godror/godror/odpi/include
+github.com/godror/godror/odpi/src
 # github.com/golang/protobuf v1.5.2
 ## explicit
 github.com/golang/protobuf/proto
@@ -29,7 +45,6 @@ github.com/jinzhu/inflection
 github.com/jinzhu/now
 # github.com/joho/godotenv v1.3.0
 ## explicit
-github.com/joho/godotenv
 # github.com/json-iterator/go v1.1.11
 ## explicit
 github.com/json-iterator/go
@@ -47,6 +62,8 @@ github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v1.0.1
 ## explicit
 github.com/modern-go/reflect2
+# github.com/thoas/go-funk v0.7.0
+github.com/thoas/go-funk
 # github.com/ugorji/go v1.2.6
 ## explicit
 # github.com/ugorji/go/codec v1.2.6
@@ -67,6 +84,9 @@ golang.org/x/text/internal/language
 golang.org/x/text/internal/language/compact
 golang.org/x/text/internal/tag
 golang.org/x/text/language
+# golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
+golang.org/x/xerrors
+golang.org/x/xerrors/internal
 # google.golang.org/protobuf v1.26.0
 google.golang.org/protobuf/encoding/prototext
 google.golang.org/protobuf/encoding/protowire
@@ -100,7 +120,6 @@ google.golang.org/protobuf/types/descriptorpb
 gopkg.in/yaml.v2
 # gorm.io/driver/mysql v1.1.0
 ## explicit
-gorm.io/driver/mysql
 # gorm.io/gorm v1.21.10
 ## explicit
 gorm.io/gorm
